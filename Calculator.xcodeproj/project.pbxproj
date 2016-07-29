@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E56BB8B1D48AA5B002B5E26 /* lightBut.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E56BB891D48AA5B002B5E26 /* lightBut.png */; };
-		6E56BB8C1D48AA5B002B5E26 /* lowBut.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E56BB8A1D48AA5B002B5E26 /* lowBut.png */; };
+		6E56BB8E1D48BB41002B5E26 /* OperatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E56BB8D1D48BB41002B5E26 /* OperatorButton.swift */; };
 		6E5FD34C1D485649009E4D0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5FD34B1D485649009E4D0D /* AppDelegate.swift */; };
 		6E5FD34E1D485649009E4D0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5FD34D1D485649009E4D0D /* ViewController.swift */; };
 		6E5FD3511D485649009E4D0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5FD34F1D485649009E4D0D /* Main.storyboard */; };
 		6E5FD3531D485649009E4D0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5FD3521D485649009E4D0D /* Assets.xcassets */; };
 		6E5FD3561D485649009E4D0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5FD3541D485649009E4D0D /* LaunchScreen.storyboard */; };
+		6E960B6F1D4B00320072B442 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E960B6E1D4B00320072B442 /* GradientView.swift */; };
+		6E960B711D4B148F0072B442 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E960B701D4B148F0072B442 /* NumberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6E56BB891D48AA5B002B5E26 /* lightBut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightBut.png; sourceTree = "<group>"; };
-		6E56BB8A1D48AA5B002B5E26 /* lowBut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lowBut.png; sourceTree = "<group>"; };
+		6E56BB8D1D48BB41002B5E26 /* OperatorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorButton.swift; sourceTree = "<group>"; };
 		6E5FD3481D485649009E4D0D /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5FD34B1D485649009E4D0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E5FD34D1D485649009E4D0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +26,8 @@
 		6E5FD3521D485649009E4D0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E5FD3551D485649009E4D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E5FD3571D485649009E4D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E960B6E1D4B00320072B442 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		6E960B701D4B148F0072B442 /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +60,11 @@
 		6E5FD34A1D485649009E4D0D /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				6E56BB891D48AA5B002B5E26 /* lightBut.png */,
-				6E56BB8A1D48AA5B002B5E26 /* lowBut.png */,
 				6E5FD34B1D485649009E4D0D /* AppDelegate.swift */,
 				6E5FD34D1D485649009E4D0D /* ViewController.swift */,
+				6E56BB8D1D48BB41002B5E26 /* OperatorButton.swift */,
+				6E960B701D4B148F0072B442 /* NumberView.swift */,
+				6E960B6E1D4B00320072B442 /* GradientView.swift */,
 				6E5FD34F1D485649009E4D0D /* Main.storyboard */,
 				6E5FD3521D485649009E4D0D /* Assets.xcassets */,
 				6E5FD3541D485649009E4D0D /* LaunchScreen.storyboard */,
@@ -129,9 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5FD3561D485649009E4D0D /* LaunchScreen.storyboard in Resources */,
-				6E56BB8C1D48AA5B002B5E26 /* lowBut.png in Resources */,
 				6E5FD3531D485649009E4D0D /* Assets.xcassets in Resources */,
-				6E56BB8B1D48AA5B002B5E26 /* lightBut.png in Resources */,
 				6E5FD3511D485649009E4D0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5FD34E1D485649009E4D0D /* ViewController.swift in Sources */,
+				6E56BB8E1D48BB41002B5E26 /* OperatorButton.swift in Sources */,
+				6E960B6F1D4B00320072B442 /* GradientView.swift in Sources */,
+				6E960B711D4B148F0072B442 /* NumberView.swift in Sources */,
 				6E5FD34C1D485649009E4D0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

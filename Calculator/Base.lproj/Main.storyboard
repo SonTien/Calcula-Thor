@@ -18,18 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFc-wQ-HVj" userLabel="Display View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFc-wQ-HVj" userLabel="Display View" customClass="GradientView" customModule="Calculator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN3-cd-Ynr">
                                         <rect key="frame" x="192" y="153" width="31" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBs-pD-nbW">
-                                        <rect key="frame" x="16" y="68" width="398" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBs-pD-nbW">
+                                        <rect key="frame" x="16" y="81" width="398" height="17"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -41,10 +42,10 @@
                                     <constraint firstItem="GN3-cd-Ynr" firstAttribute="top" secondItem="wBs-pD-nbW" secondAttribute="bottom" constant="55" id="sXV-gi-TQY"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsg-HP-leY" userLabel="Calculator View">
+                            <view tag="110" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsg-HP-leY" userLabel="Calculator View" customClass="GradientView" customModule="Calculator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="300" width="414" height="436"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvy-Vb-7fx">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvy-Vb-7fx" customClass="NumberView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="16" y="54" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -52,8 +53,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="7"/>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jaL-X7-ClK"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MO9-oT-rcD">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MO9-oT-rcD" customClass="NumberView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="118" y="54" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -61,8 +65,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="8"/>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axd-Cl-hdU"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3An-wZ-J4V">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3An-wZ-J4V" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="321" y="54" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.89803921568627454" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -70,8 +77,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="*"/>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJs-Tr-kAb"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEy-cO-1CG">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEy-cO-1CG" customClass="NumberView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="219" y="54" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -79,8 +89,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="9"/>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R8U-HS-6aF"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t09-C5-3wU">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t09-C5-3wU" customClass="NumberView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="16" y="149" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -88,8 +101,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="4"/>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4hX-jU-n6E"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lso-Fj-rLM">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lso-Fj-rLM" customClass="NumberView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="16" y="244" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -97,19 +113,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="1"/>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CE2-rF-bJF"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhg-V6-Had">
-                                        <rect key="frame" x="16" y="339" width="177" height="65"/>
-                                        <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="177" id="0sg-2S-NqA"/>
-                                            <constraint firstAttribute="height" constant="65" id="rKG-hF-lWm"/>
-                                            <constraint firstAttribute="width" secondItem="Rhg-V6-Had" secondAttribute="height" multiplier="177:65" id="xiE-d0-004"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
-                                        <state key="normal" title="0"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhV-Xu-gOe">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhV-Xu-gOe" customClass="NumberView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="118" y="149" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -117,8 +125,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="5"/>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xsL-qY-GIg"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t70-qB-oLQ">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t70-qB-oLQ" customClass="NumberView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="219" y="149" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -126,8 +137,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="6"/>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Icu-5t-GHR"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hd1-H3-zCV">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hd1-H3-zCV" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="321" y="149" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -135,8 +149,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IvZ-rc-y0o"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud0-j3-f6c">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud0-j3-f6c" customClass="NumberView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="118" y="244" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -144,8 +161,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="2"/>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RCZ-Ze-IM8"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBM-Sh-9T8">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBM-Sh-9T8" customClass="NumberView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="219" y="244" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -153,8 +173,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="3"/>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="szg-4M-pS8"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuz-xu-Xbs">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuz-xu-Xbs" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="321" y="244" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -162,8 +185,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibe-f5-ZGv"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMJ-pb-Nj3">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMJ-pb-Nj3" customClass="NumberView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="219" y="339" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -174,7 +200,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="."/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlf-5M-LKP">
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlf-5M-LKP" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="321" y="339" width="75" height="65"/>
                                         <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -182,6 +208,23 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
                                         <state key="normal" title="="/>
+                                        <connections>
+                                            <action selector="resultAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FVX-0Y-Mah"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhg-V6-Had" customClass="NumberView" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="339" width="177" height="65"/>
+                                        <color key="backgroundColor" red="0.92535416670000004" green="0.89818487680000003" blue="0.74428835820000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="177" id="0sg-2S-NqA"/>
+                                            <constraint firstAttribute="height" constant="65" id="rKG-hF-lWm"/>
+                                            <constraint firstAttribute="width" secondItem="Rhg-V6-Had" secondAttribute="height" multiplier="177:65" id="xiE-d0-004"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="23"/>
+                                        <state key="normal" title="0"/>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nLt-b4-tkk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.77647058823529413" green="0.0" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
@@ -239,18 +282,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXW-Qp-Di6" userLabel="Middle View">
                                 <rect key="frame" x="0.0" y="268" width="414" height="65"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgi-3b-yQj">
-                                        <rect key="frame" x="16" y="0.0" width="75" height="65"/>
-                                        <color key="backgroundColor" red="1" green="0.90588235294117647" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Dgi-3b-yQj" secondAttribute="height" multiplier="15:13" id="jSf-qc-QrI"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="23"/>
-                                        <state key="normal" title="AC">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTo-IW-66p">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTo-IW-66p" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="117" y="0.0" width="75" height="65"/>
                                         <color key="backgroundColor" red="1" green="0.90588235289999997" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -260,8 +292,11 @@
                                         <state key="normal" title="+/-">
                                             <color key="titleColor" red="0.025155830399999999" green="0.46468418919999999" blue="0.93752083330000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cEe-Vh-lhc"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trc-wQ-yMh">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trc-wQ-yMh" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="322" y="0.0" width="75" height="65"/>
                                         <color key="backgroundColor" red="1" green="0.90588235289999997" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -271,8 +306,11 @@
                                         <state key="normal" title="/">
                                             <color key="titleColor" red="0.025155830399999999" green="0.46468418919999999" blue="0.93752083330000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEC-r4-xpu"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxC-Yq-OtF">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxC-Yq-OtF" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="219" y="0.0" width="75" height="65"/>
                                         <color key="backgroundColor" red="1" green="0.90588235289999997" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -282,6 +320,23 @@
                                         <state key="normal" title="%">
                                             <color key="titleColor" red="0.025155830399999999" green="0.46468418919999999" blue="0.93752083330000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DXn-pR-Euz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgi-3b-yQj" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="0.0" width="75" height="65"/>
+                                        <color key="backgroundColor" red="1" green="0.90588235294117647" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Dgi-3b-yQj" secondAttribute="height" multiplier="15:13" id="jSf-qc-QrI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="23"/>
+                                        <state key="normal" title="AC">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lD2-Wh-Gb0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -326,8 +381,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="distanceBetweenInputTexfieldAndResultLabel" destination="sXV-gi-TQY" id="hks-lu-ETS"/>
+                        <outlet property="distanceBetweenInputTextfieldAndResultLabel" destination="sXV-gi-TQY" id="dZ5-Wv-yAk"/>
                         <outlet property="distanceBetweenResultLabelAndMiddleView" destination="lbh-tD-bGh" id="Ffp-t7-gzC"/>
+                        <outlet property="inputTextfield" destination="wBs-pD-nbW" id="gjb-zd-3Of"/>
+                        <outlet property="resultLabel" destination="GN3-cd-Ynr" id="OM3-HD-TTS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
